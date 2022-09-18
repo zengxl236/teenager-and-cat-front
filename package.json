@@ -1,0 +1,34 @@
+{
+  "name": "teenager-and-cat-front",
+  "version": "0.0.0",
+  "description": "Teenager and cat. Study. Front.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "license": "BSD",
+  "dependencies": {
+    "autoprefixer": "^10.4.9",
+    "axios": "^0.27.2",
+    "element-plus": "^2.2.16",
+    "normalize.css": "^8.0.1",
+    "pinia": "^2.0.22",
+    "sass": "^1.54.9",
+    "vue": "^3.2.38",
+    "vue-router": "^4.1.5"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.1.4",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "eslint": "^8.22.0",
+    "eslint-plugin-vue": "^9.3.0",
+    "prettier": "^2.7.1",
+    "unplugin-auto-import": "^0.11.2",
+    "unplugin-vue-components": "^0.22.7",
+    "vite": "^3.0.9",
+    "vite-plugin-compression": "^0.5.1"
+  }
+}
