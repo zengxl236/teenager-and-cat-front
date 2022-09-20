@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import LayoutHeader from './LayoutHeader.vue';
+import LayoutHeader from './Header.vue';
 </script>
 
 <style lang="scss">

@@ -28,13 +28,13 @@ const router = createRouter({
       path: '/',
       name: 'root',
       redirect: navLink[0]?.path,
-      component: () => import('@/layout/LayoutContainer.vue'),
+      component: () => import('@/layout/index.vue'),
       children: navLink
     },
     {
       path: '/login',
       name: 'login',
-      component: () => import('@/views/login/LoginContainer.vue')
+      component: () => import('@/views/login/index.vue')
     },
     {
       path: '/:pathMatch(.*)*',

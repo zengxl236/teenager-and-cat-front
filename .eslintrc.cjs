@@ -9,5 +9,8 @@ module.exports = {
   },
   globals: {
     globalConfig: 'readonly'
+  },
+  rules: {
+    'vue/multi-word-component-names': 'off'
   }
 };

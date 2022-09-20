@@ -3,10 +3,10 @@
     <el-row>
       <el-col :xs="24" :sm="24" :md="22" :lg="18" :xl="14" class="container">
         <div class="el-row">
-          <el-col :xs="0" :sm="10" :md="12" :lg="12" :xl="14">
+          <el-col :xs="0" :sm="10" :md="12" :lg="12" :xl="12">
             <img src="@/assets/images/login-left.png" />
           </el-col>
-          <el-col :xs="24" :sm="14" :md="12" :lg="12" :xl="10" class="form">
+          <el-col :xs="24" :sm="14" :md="12" :lg="12" :xl="12" class="form">
             <h1>
               <span>L</span>
               <span>O</span>
@@ -154,7 +154,7 @@ const doLogin = () => {
   height: 100%;
   padding: 40px;
   box-sizing: border-box;
-  background: url('@/assets/images/login-bg.jpg') no-repeat;
+  background: url('@/assets/images/login-bg.png') no-repeat;
   background-size: 100% 100%;
 
   .el-row {
