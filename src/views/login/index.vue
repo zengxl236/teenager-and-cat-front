@@ -1,12 +1,12 @@
 <template>
   <div class="login-container">
     <el-row>
-      <el-col :xs="24" :sm="24" :md="22" :lg="18" :xl="14" class="container">
+      <el-col :xs="24" :sm="24" :md="22" :lg="18" :xl="12" class="container">
         <div class="el-row">
-          <el-col :xs="0" :sm="10" :md="12" :lg="12" :xl="12">
+          <el-col :xs="0" :sm="12" :md="12" :lg="12" :xl="12">
             <img src="@/assets/images/login-left.png" />
           </el-col>
-          <el-col :xs="24" :sm="14" :md="12" :lg="12" :xl="12" class="form">
+          <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="form">
             <h1>
               <span>L</span>
               <span>O</span>
