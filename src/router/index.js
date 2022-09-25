@@ -18,6 +18,12 @@ export const navLink = [
     name: 'photos',
     component: () => import('@/views/temp/TempIndex.vue'),
     meta: { title: 'Photos' }
+  },
+  {
+    path: '/upload',
+    name: 'upload',
+    component: () => import('@/views/upload/index.vue'),
+    meta: { title: 'Upload' }
   }
 ];
 
