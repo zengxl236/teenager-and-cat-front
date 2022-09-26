@@ -7,3 +7,13 @@ export function existsApi(params) {
     params
   });
 }
+
+export function uploadApi(data, onUploadProgress) {
+  return request({
+    url: '/file/upload',
+    method: 'post',
+    type: 'multipart/form-data',
+    onUploadProgress,
+    data
+  });
+}
