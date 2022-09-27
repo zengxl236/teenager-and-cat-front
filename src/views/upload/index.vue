@@ -81,22 +81,6 @@ const getHash = (data, fragment = true) => {
     loadNext();
   });
 };
-const setFormData = async i => {
-  const start = i * file.chunkSize;
-  const end = (i + 1) * file.chunkSize;
-  const fileSplit = file.data.slice(start, end);
-  const currentHash = await getHash(fileSplit, false);
-  const fd = new FormData();
-  fd.append('file', fileSplit);
-  fd.append('hash', file.hash);
-  fd.append('name', file.name);
-  fd.append('size', file.size);
-  fd.append('chunks', file.chunks);
-  fd.append('chunkIdx', i);
-  fd.append('currentHash', currentHash);
-
-  return fd;
-};
 const uploadChunkApi = (fd, onUploadProgress) => {
   return new Promise((resolve, reject) => {
     uploadApi(fd, onUploadProgress)
@@ -112,7 +96,18 @@ const handlerChunk = async () => {
       return;
     }
 
-    const fd = setFormData(i);
+    const start = i * file.chunkSize;
+    const end = (i + 1) * file.chunkSize;
+    const fileSplit = file.data.slice(start, end);
+    const currentHash = await getHash(fileSplit, false);
+    const fd = new FormData();
+    fd.append('file', fileSplit);
+    fd.append('hash', file.hash);
+    fd.append('name', file.name);
+    fd.append('size', file.size);
+    fd.append('chunks', file.chunks);
+    fd.append('chunkIdx', i);
+    fd.append('currentHash', currentHash);
     const progressEvent = e => {
       if (e.loaded !== e.total) {
         return;

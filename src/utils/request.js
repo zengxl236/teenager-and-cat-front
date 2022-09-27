@@ -6,10 +6,9 @@ const service = axios.create({
 });
 
 service.interceptors.request.use(
-  axiosConfig => {
-    axiosConfig.headers.Authorization = window.sessionStorage.getItem('token');
-
-    return axiosConfig;
+  config => {
+    config.headers.Authorization = window.sessionStorage.getItem('token');
+    return config;
   },
 
   error => {
