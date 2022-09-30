@@ -147,7 +147,7 @@ const doSubmit = async () => {
     return;
   }
 
-  uploadProgress.exists = existsRes.data;
+  uploadProgress.exists = existsRes.data.map(i => Number(i));
   uploadProgress.progress = Math.ceil(existsRes.data.length / file.chunks);
   handlerChunk();
 };
